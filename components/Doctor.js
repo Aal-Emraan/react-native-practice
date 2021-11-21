@@ -5,12 +5,15 @@ const styles = StyleSheet.create({
 	name: {
 		color: "red",
 	},
+	background: {
+		backgroundColor: "red",
+	},
 });
 
 export default function Doctor({ user }) {
 	const { name, email } = user;
 	return (
-		<View>
+		<View style={styles.background}>
 			<Text style={styles.name}>this is {name}</Text>
 			<Image
 				source={{

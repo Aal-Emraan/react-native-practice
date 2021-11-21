@@ -1,15 +1,25 @@
 import { StatusBar } from "expo-status-bar";
 import React from "react";
-import { Image, StyleSheet, Text, View } from "react-native";
+import {
+	Image,
+	SafeAreaView,
+	StyleSheet,
+	TouchableHighlight,
+	Text,
+	View,
+	Button,
+	Alert,
+} from "react-native";
 import { Link, NativeRouter, Routes, Route } from "react-router-native";
 import Doctors from "./components/Doctors";
 import Home from "./components/Home";
 
 export default function App() {
 	return (
-		<View style={styles.container}>
-			<Text>
-				Open up App.js to start working on your app! this is expo
+		<SafeAreaView style={styles.container}>
+			<Text numberOfLines={1} onPress={() => console.log("text pressed")}>
+				Open up App.js to start working on your app! this is expo and
+				make it as long as possible.
 			</Text>
 			<Text>this is new paragraph</Text>
 			<Text>this is another paragraph</Text>
@@ -40,7 +50,30 @@ export default function App() {
 				}}
 				style={{ width: 200, height: 200 }}
 			/>
-		</View>
+			<TouchableHighlight onPress={() => console.log("image pressed")}>
+				<Image
+					// blurRadius={2}
+					fadeDuration={1000}
+					source={{
+						width: 200,
+						height: 300,
+						uri: "https://picsum.photos/200/300",
+					}}
+				/>
+			</TouchableHighlight>
+			<Button
+				color="red"
+				title="click me"
+				onPress={() =>
+					Alert.alert("My title", "This is and alert", [
+						{
+							text: "Yes",
+						},
+						{ text: "No" },
+					])
+				}
+			></Button>
+		</SafeAreaView>
 	);
 }
 

@@ -16,7 +16,7 @@ export default function Doctors() {
 			<Text>this is Doctors</Text>
 			<ScrollView>
 				{users.map((user) => (
-					<Doctor user={user}></Doctor>
+					<Doctor user={user} key={user.id}></Doctor>
 				))}
 			</ScrollView>
 		</View>
