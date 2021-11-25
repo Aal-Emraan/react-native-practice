@@ -3,7 +3,6 @@ import { StyleSheet, View, Platform, StatusBar } from "react-native";
 import Home from "./screens/Home";
 
 export default function App() {
-	console.log(StatusBar.currentHeight);
 	return (
 		<View style={styles.androidSafeArea}>
 			<Home />
