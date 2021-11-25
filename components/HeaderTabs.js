@@ -38,7 +38,7 @@ const HeaderButton = (props) => (
 		<Text
 			style={{
 				color: props.activeTab === props.text ? "white" : "black",
-				fontWeight: "900",
+				fontWeight: "bold",
 				fontSize: 15,
 			}}
 		>
